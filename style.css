@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.our-team-text-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.our-team-text-div h2{
+    font-size: clamp(18px, 2vw, 50px);
+}
+.our-team-text-div p, .our-team-text-div h6{
+    font-size: clamp(10px, 2vw, 25px);
+}
+.our-team-text-div p{
+    color: #5a5858;
+    max-width: 600px;
+}
+
+.our-team-text-div h2{
+    color: #111111;
+    line-height: 1;
+    font-size: clamp(18px, 4vw, 60px);
+    font-weight: bold;
+}
+.display-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.our-team-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 7px 0;
+    position: relative;
+}
+.our-team-circle{
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* border: 2px solid purple; */
+}
+.our-team-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 50% 80%; */
+    object-position: center;
+}
+
+.our-team-box h3{
+    font-weight: 500;
+}
+.our-team-box h3 span{
+    font-weight: bold;
+}
+
+
+
+
+ 
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+
+
+.our-team-box:hover img {
+    filter: brightness(60%);
+}
+
+.our-team-box:hover .text-overlay {
+    opacity: 1;
+} 
+
+.text-overlay h3{
+    font-size: 16px;
+    margin-top: 8px;
+}
+.text-overlay p{
+    font-size: 11px;
+}
